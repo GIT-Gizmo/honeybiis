@@ -1,0 +1,277 @@
+.hamburger-menu {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 5%;
+    top: 10%;
+    z-index: 300;
+
+    @media(max-width: 800px) {
+        width: 35px;
+        height: 35px;
+    }
+
+    @media(max-width: 500px) {
+        width: 25px;
+        height: 25px;
+    }
+
+    .menu {
+        @extend %fullSpace;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: transform .5s;
+
+        &-line {
+            width: 100%;
+            height: 4px;
+            background-color: $color-primary;
+            transform-origin: right;
+            transition: all .5s .5s;
+
+            @media(max-width: 800px) {
+                height: 3px;
+            }
+
+            @media(max-width: 500px) {
+                height: 2px;
+            }
+        }
+    }
+}
+
+.logo {
+    font-size: 70px;
+    color: $color-primary;
+    width: 110px;
+    height: 110px;
+    border: 3px solid $color-primary;
+    border-radius: 50%;
+    margin-right: 20px;
+    text-decoration: none;
+    @include flexLayout;
+
+    @media(max-width: 1000px) {
+        font-size: 50px;
+        width: 90px;
+        height: 90px;
+    }
+
+    @media(max-width: 500px) {
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
+}
+
+.main-name {
+    font-family: $font-nunito;
+    font-size: 50px;
+    color: $color-secondary;
+    @include textStyles;
+
+    @media(max-width: 1000px) {
+        font-size: 40px;
+    }
+
+    @media(max-width: 500px) {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.sub-name {
+    font-family: $font-josefinSans;
+    font-size: 18px;
+    color: $color-secondary;
+    text-align: center;
+    @include textStyles;
+
+    @media(max-width: 500px) {
+        font-size: 12px;
+    }
+}
+
+.main-heading {
+    font-family: $font-dancingScript;
+    font-size: 100px;
+    font-weight: 300;
+    color: $color-primary;
+    margin-bottom: 40px;
+
+    @media(max-width: 1600px) {
+        font-size: 80px;
+    }
+
+    @media(max-width: 1000px) {
+        font-size: 60px;
+    }
+
+    @media(max-width: 500px) {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+.sub-heading {
+    font-family: $font-josefinSans;
+    font-size: 55px;
+    font-weight: 300;
+    color: $color-secondary;
+    margin-bottom: 80px;
+    text-align: center;
+
+    @media(max-width: 1600px) {
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+
+    @media(max-width: 1300px) {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    @media(max-width: 1000px) {
+        font-size: 30px;
+    }
+
+    @media(max-width: 500px) {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+.main-btn {
+    width: 170px;
+    height: 45px;
+    font-family: $font-josefinSans;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-primary;
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-dark;
+    }
+
+    @media(max-width: 800px) {
+        width: 150px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    @media(max-width: 500px) {
+        width: 130px;
+        height: 30px;
+        font-size: 10px;
+    }
+}
+
+.card {
+    width: 33.3333%;
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .card-overlay {
+        left: 0;
+    }
+
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background-color: rgba($color-primary, .6);
+        color: $color-white;
+        z-index: 10;
+        @include flexLayout;
+        flex-direction: column;
+        @extend %fullSpace;
+        transition: left .7s;
+
+        &-heading {
+            font-family: $font-nunito;
+            font-size: 50px;
+            @include textStyles(capitalize);
+
+            @media(max-width: 900px) {
+                font-size: 35px;
+            }
+
+            @media(max-width: 650px) {
+                font-size: 25px;
+            }
+
+            @media(max-width: 500px) {
+                display: none;
+            }
+        }
+
+        &-paragraph {
+            font-family: $font-josefinSans;
+            font-size: 30px;
+            margin-bottom: 30px;
+            @include textStyles(capitalize);
+
+            @media(max-width: 900px) {
+                font-size: 20px;
+            }
+
+            @media(max-width: 650px) {
+                font-size: 15px;
+            }
+
+            @media(max-width: 650px) {
+                display: none;
+            }
+        }
+
+        &-btn {
+            width: 150px;
+            height: 40px;
+            color: $color-primary;
+            background-color: $color-white;
+            font-family: $font-josefinSans;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid $color-primary;
+            border-radius: 30px;
+            outline: none;
+            cursor: pointer;
+
+            @media(max-width: 900px) {
+                font-size: 12px;
+                width: 120px;
+                height: 30px;
+            }
+
+            @media(max-width: 650px) {
+                font-size: 10px;
+                width: 100px;
+                height: 30px;
+            }
+        }
+    }
+
+    &-img {
+        @extend %fullSpace;
+        object-fit: cover;
+        opacity: .5;
+    }
+}
+
+
+.no-display {
+    display: none;
+}

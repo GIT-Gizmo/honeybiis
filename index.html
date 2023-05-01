@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Josefin+Sans:300,400,600,700|Nunito:300,400,600,700" rel="stylesheet">
+    <title>Restaurant "Honeybiis"</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <input type="checkbox" id="check" class="checkbox" hidden>
+        <section class="hamburger-menu">
+            <label for="check" class="menu" onClick="addNav()">
+                <div class="menu-line menu-line-1"></div>
+                <div class="menu-line menu-line-2"></div>
+                <div class="menu-line menu-line-3"></div>
+            </label>
+        </section>
+
+        <section id="nav" class="navbar-nav">
+            <section class="navbar-nav-left">
+                <img src="/images/nav-img-1.jpeg" alt="" class="left-img left-img-1">
+                <img src="/images/nav-img-2.jpeg" alt="" class="left-img left-img-2">
+                <img src="/images/nav-img-3.jpeg" alt="" class="left-img left-img-3">
+            </section>
+            <section class="navbar-nav-right">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-list-link" onClick="removeNav()">Home</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="#about-us" class="nav-list-link" onClick="removeNav()">About Us</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="#gallery" class="nav-list-link" onClick="removeNav()">Gallery</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-list-link">Reservation</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-list-link">Services</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="#footer" class="nav-list-link" onClick="removeNav()">Contact</a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </nav>
+
+    <!--Header-->
+    <header class="header">
+        <section class="brand">
+            <a class="logo" href="#"><i class="fas fa-utensils"></i></a>
+            <section>
+                <h1 class="main-name">Honeybiis</h1>
+                <p class="sub-name">Restaurant</p>
+            </section>
+        </section>
+
+        <section class="header-banner">
+            <h1 class="main-heading">Welcome</h1>
+            <h3 class="sub-heading">Where Sweetness Meets Savouriness</h3>
+            <button type="button" class="main-btn">Reservation</button>
+        </section>
+    </header>
+    <!--End of Header-->
+
+    <!--About Us-->
+    <section class="about-us">
+        <section class="about-us-left">
+            <img src="/images/about-us-img.png" alt="">
+        </section>
+
+        <article id="about-us" class="about-us-right">
+            <h1 class="main-heading">About Us</h1>
+            <h3 class="sub-heading">Introduction To Honeybiis Dishes</h3>
+            <section class="stars">
+                <i class="fas fa-star-of-life star"></i>
+                <i class="fas fa-star-of-life star"></i>
+                <i class="fas fa-star-of-life star"></i>
+            </section>
+            <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque blanditiis incidunt ullam iure minus laudantium cumque. Commodi unde accusamus fuga reiciendis voluptas? Illo, quos distinctio. Reprehenderit, assumenda, perspiciatis perferendis commodi pariatur ab atque amet excepturi debitis voluptates a cumque ratione quam deserunt suscipit illum esse nemo beatae minima est! Debitis!</p>
+            <section class="stars">
+                <i class="fas fa-star-of-life star"></i>
+                <i class="fas fa-star-of-life star"></i>
+                <i class="fas fa-star-of-life star"></i>
+            </section>
+            <button type="button" class="main-btn">Read More</button>
+        </article>
+    </section>
+    <!--End of About Us-->
+
+    <!--Gallery-->
+    <section id="gallery" class="gallery">
+        <section class="cards-wrapper">
+            <section class="card">
+                <section class="card-overlay">
+                    <h1 class="card-overlay-heading">Food Name</h1>
+                    <p class="card-overlay-paragraph">Price: $30.00</p>
+                    <button type="button" class="card-overlay-btn">Order Now</button>
+                </section>
+                <img src="/images/gallery-img-1.jpeg" alt="Food Image" class="card-img">
+            </section>
+            <section class="card">
+                <section class="card-overlay">
+                    <h1 class="card-overlay-heading">Food Name</h1>
+                    <p class="card-overlay-paragraph">Price: $30.00</p>
+                    <button type="button" class="card-overlay-btn">Order Now</button>
+                </section>
+                <img src="/images/gallery-img-2.jpeg" alt="Food Image" class="card-img">
+            </section>
+            <section class="card">
+                <section class="card-overlay">
+                    <h1 class="card-overlay-heading">Food Name</h1>
+                    <p class="card-overlay-paragraph">Price: $30.00</p>
+                    <button type="button" class="card-overlay-btn">Order Now</button>
+                </section>
+                <img src="/images/gallery-img-3.jpeg" alt="Food Image" class="card-img">
+            </section>
+            <section class="card">
+                <section class="card-overlay">
+                    <h1 class="card-overlay-heading">Food Name</h1>
+                    <p class="card-overlay-paragraph">Price: $30.00</p>
+                    <button type="button" class="card-overlay-btn">Order Now</button>
+                </section>
+                <img src="/images/gallery-img-4.jpeg" alt="Food Image" class="card-img">
+            </section>
+            <section class="card">
+                <section class="card-overlay">
+                    <h1 class="card-overlay-heading">Food Name</h1>
+                    <p class="card-overlay-paragraph">Price: $30.00</p>
+                    <button type="button" class="card-overlay-btn">Order Now</button>
+                </section>
+                <img src="/images/gallery-img-5.jpeg" alt="Food Image" class="card-img">
+            </section>
+            <section class="card">
+                <section class="card-overlay">
+                    <h1 class="card-overlay-heading">Food Name</h1>
+                    <p class="card-overlay-paragraph">Price: $30.00</p>
+                    <button type="button" class="card-overlay-btn">Order Now</button>
+                </section>
+                <img src="/images/gallery-img-6.jpeg" alt="Food Image" class="card-img">
+            </section>
+        </section>
+    </section>
+    <!--End of Gallery-->
+
+    <!--Footer-->
+    <footer id="footer" class="footer">
+        <section class="footer-header">
+            <a class="logo" href="#"><i class="fas fa-utensils"></i></a>
+            <section>
+                <h1 class="main-name">Honeybiis</h1>
+                <p class="sub-name">Restaurant</p>
+            </section>
+        </section>
+
+        <section class="footer-social-media">
+            <ul class="social-media">
+                <li class="social-media-icon">
+                    <a href="#" class="social-media-link">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li class="social-media-icon">
+                    <a href="#" class="social-media-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-media-icon">
+                    <a href="#" class="social-media-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li class="social-media-icon">
+                    <a href="#" class="social-media-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="footer-copyright">
+            <p class="footer-copyright-paragraph">
+                &copy; Copyright. Restaurant "Honeybiis". All Rights Reserved
+            </p>
+        </section>
+    </footer>
+    <!--End of Footer-->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
